@@ -4,7 +4,7 @@ Configuração do Fluent Bit (FireLens) no AWS ECS/Fargate para evitar splits de
 
 ## 📦 Estrutura
 
-- `Dockerfile`: Define uma imagem customizada baseada na imagem oficial da AWS com um arquivo de configuração extra.
+- `Dockerfile`: Crie uma imagem customizada baseada na imagem oficial da AWS com um arquivo de configuração extra.
 - `extra.conf`: Contém o filtro `multiline` com `partial_message` para unir logs fragmentados.
 - `README.md`: Instruções detalhadas de configuração.
 
