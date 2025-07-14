@@ -20,10 +20,12 @@ docker push <ID-CONTA-AWS>.dkr.ecr.<REGIAO>.amazonaws.com/fluent-bit-custom:late
 
 2. No ECS, configure o container `log_router` com:
 
-Adicione no Options:
+Adicione no Options do firelensConfiguration:
 
     "config-file-type": "file",
     "config-file-value": "/extra.conf",
+
+Exemplo:
 
 ```json
 "firelensConfiguration": {
