@@ -10,12 +10,13 @@ Configuração do Fluent Bit (FireLens) no AWS ECS/Fargate para evitar splits de
 
 ## 🚀 Como usar
 
-1. Faça build da imagem customizada:
+1. Crie seu repo privado no Amazon ECR.
+2. Faça build da imagem customizada e o push para o repo:
 
 ```bash
 docker build -t fluent-bit-custom .
-docker tag fluent-bit-custom:latest <ID-CONTA-AWS>.dkr.ecr.<REGIAO>.amazonaws.com/fluent-bit-custom:latest
-docker push <ID-CONTA-AWS>.dkr.ecr.<REGIAO>.amazonaws.com/fluent-bit-custom:latest
+docker tag fluent-bit-custom:latest <ID-ACCOUNT-AWS>.dkr.ecr.<REGION>.amazonaws.com/fluent-bit-custom:latest
+docker push <ID-ACCOUNT-AWS>.dkr.ecr.<REGION>.amazonaws.com/fluent-bit-custom:latest
 ```
 
 2. No ECS, configure o container `log_router` com:
